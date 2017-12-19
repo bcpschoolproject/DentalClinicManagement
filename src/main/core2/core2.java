@@ -29,7 +29,7 @@ public class core2 extends javax.swing.JFrame {
     
     public core2() throws SQLException {
         initComponents();
-        displayRecord();
+        //displayRecord();
     }
     
     @SuppressWarnings("unchecked")
@@ -40,15 +40,16 @@ public class core2 extends javax.swing.JFrame {
         jTabbedPane1 = new javax.swing.JTabbedPane();
         outPatientTreatment = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
-        tf_lastname = new javax.swing.JTextField();
-        jLabel2 = new javax.swing.JLabel();
-        tf_firstname = new javax.swing.JTextField();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        tf_middlename = new javax.swing.JTextField();
         jScrollPane2 = new javax.swing.JScrollPane();
         tbl_procedures = new javax.swing.JTable();
         jLabel12 = new javax.swing.JLabel();
+        jPanel1 = new javax.swing.JPanel();
+        jLabel2 = new javax.swing.JLabel();
+        lbl_firstname = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        lbl_lastname = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        lbl_middlename = new javax.swing.JLabel();
         laboratoryManagement = new javax.swing.JPanel();
         hmoInsurance = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
@@ -81,33 +82,6 @@ public class core2 extends javax.swing.JFrame {
             }
         });
 
-        tf_lastname.setText(" ");
-        tf_lastname.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                tf_lastnameActionPerformed(evt);
-            }
-        });
-
-        jLabel2.setText("Lastname:");
-
-        tf_firstname.setText(" ");
-        tf_firstname.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                tf_firstnameActionPerformed(evt);
-            }
-        });
-
-        jLabel3.setText("Firstname:");
-
-        jLabel4.setText("Middlename:");
-
-        tf_middlename.setText(" ");
-        tf_middlename.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                tf_middlenameActionPerformed(evt);
-            }
-        });
-
         tbl_procedures.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
@@ -123,6 +97,47 @@ public class core2 extends javax.swing.JFrame {
 
         jLabel12.setText("Recent Procedures");
 
+        jLabel2.setText("Lastname:");
+
+        jLabel4.setText("Middlename:");
+
+        jLabel3.setText("Firstname:");
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel2)
+                    .addComponent(jLabel3)
+                    .addComponent(jLabel4))
+                .addGap(12, 12, 12)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lbl_middlename, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lbl_firstname, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lbl_lastname, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap())
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
+                    .addComponent(lbl_lastname, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel2))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
+                    .addComponent(jLabel3)
+                    .addComponent(lbl_firstname, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
+                    .addComponent(jLabel4)
+                    .addComponent(lbl_middlename, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap())
+        );
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
@@ -130,38 +145,22 @@ public class core2 extends javax.swing.JFrame {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 826, Short.MAX_VALUE)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addComponent(jLabel12)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jScrollPane2)
                             .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel2)
-                                    .addComponent(jLabel3)
-                                    .addComponent(jLabel4))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(tf_middlename, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(tf_firstname, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(tf_lastname, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addComponent(jLabel12))
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addContainerGap())
+                                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(0, 0, Short.MAX_VALUE)))
+                        .addContainerGap())))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(tf_lastname, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel2))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(tf_firstname, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel3))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(tf_middlename, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel4))
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel12)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -182,7 +181,7 @@ public class core2 extends javax.swing.JFrame {
             outPatientTreatmentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(outPatientTreatmentLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 345, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
 
@@ -388,18 +387,6 @@ public class core2 extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_btn_mainActionPerformed
 
-    private void tf_lastnameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tf_lastnameActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_tf_lastnameActionPerformed
-
-    private void tf_firstnameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tf_firstnameActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_tf_firstnameActionPerformed
-
-    private void tf_middlenameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tf_middlenameActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_tf_middlenameActionPerformed
-
     private void txt_patient_noActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_patient_noActionPerformed
         try {
             search(txt_patient_no.getText());
@@ -411,6 +398,7 @@ public class core2 extends javax.swing.JFrame {
                 Logger.getLogger(core2.class.getName()).log(Level.SEVERE, null, ex1);
             }
         }
+        txt_patient_no.setText("");
     }//GEN-LAST:event_txt_patient_noActionPerformed
 
     private void txt_patient_noInputMethodTextChanged(java.awt.event.InputMethodEvent evt) {//GEN-FIRST:event_txt_patient_noInputMethodTextChanged
@@ -437,8 +425,7 @@ public class core2 extends javax.swing.JFrame {
         String dbURL = "jdbc:mysql://localhost:3306/dental_clinic";
         String username = "root";
         String password = "";
-        
-        
+                
         String patient_no = txt_patient_no.getText();
         //String sql = "SELECT id, info.firstname, info.lastname, info.middlename, surgery.surgery,surgery.date, surgery.doctor  * FROM info, surgery, patient WHERE patient_no = "+patient_no;
         String sql = "SELECT procedures as SURGERY, date as DATE,time as TIME, doctor as DOCTOR FROM surgery WHERE patient = "+ptnt;
@@ -508,6 +495,7 @@ public class core2 extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane jScrollPane1;
@@ -515,12 +503,12 @@ public class core2 extends javax.swing.JFrame {
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTextArea jTextArea1;
     private javax.swing.JPanel laboratoryManagement;
+    private javax.swing.JLabel lbl_firstname;
+    private javax.swing.JLabel lbl_lastname;
+    private javax.swing.JLabel lbl_middlename;
     private javax.swing.JPanel outPatientTreatment;
     private javax.swing.JPanel surgeryManagement;
     private javax.swing.JTable tbl_procedures;
-    private javax.swing.JTextField tf_firstname;
-    private javax.swing.JTextField tf_lastname;
-    private javax.swing.JTextField tf_middlename;
     private javax.swing.JTextField txt_patient_no;
     // End of variables declaration//GEN-END:variables
 }
