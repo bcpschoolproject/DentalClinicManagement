@@ -179,7 +179,7 @@ public class core2 extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel12)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 381, Short.MAX_VALUE)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 468, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -210,7 +210,7 @@ public class core2 extends javax.swing.JFrame {
         );
         laboratoryManagementLayout.setVerticalGroup(
             laboratoryManagementLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 517, Short.MAX_VALUE)
+            .addGap(0, 604, Short.MAX_VALUE)
         );
 
         jTabbedPane1.addTab("Laboratory", laboratoryManagement);
@@ -366,7 +366,7 @@ public class core2 extends javax.swing.JFrame {
             .addGroup(hmoInsuranceLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(220, Short.MAX_VALUE))
+                .addContainerGap(307, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("HMO", hmoInsurance);
@@ -379,7 +379,7 @@ public class core2 extends javax.swing.JFrame {
         );
         surgeryManagementLayout.setVerticalGroup(
             surgeryManagementLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 517, Short.MAX_VALUE)
+            .addGap(0, 604, Short.MAX_VALUE)
         );
 
         jTabbedPane1.addTab("Surgery Schedule", surgeryManagement);
@@ -392,7 +392,7 @@ public class core2 extends javax.swing.JFrame {
         );
         dischargeManagementLayout.setVerticalGroup(
             dischargeManagementLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 517, Short.MAX_VALUE)
+            .addGap(0, 604, Short.MAX_VALUE)
         );
 
         jTabbedPane1.addTab("Discharge", dischargeManagement);
