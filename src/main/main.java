@@ -10,6 +10,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import main.core1.core1;
 import main.core2.core2;
+import main.core2.index;
 
 /**
  *
@@ -22,6 +23,7 @@ public class main extends javax.swing.JFrame {
      */
     public main() {
         initComponents();
+        admin_level.setVisible(false);
     }
 
     /**
@@ -33,128 +35,216 @@ public class main extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
-        btn_core1 = new javax.swing.JButton();
-        btn_core2 = new javax.swing.JButton();
-        jPanel2 = new javax.swing.JPanel();
-        btn_main = new javax.swing.JButton();
-        user_level = new javax.swing.JLabel();
+        header = new javax.swing.JPanel();
+        window_control = new javax.swing.JPanel();
+        btn_back = new javax.swing.JButton();
+        btn_close = new javax.swing.JButton();
+        admin_level = new javax.swing.JLabel();
+        logo = new javax.swing.JLabel();
+        jTabbedPane1 = new javax.swing.JTabbedPane();
+        patient_registration = new javax.swing.JPanel();
+        btn_outPatient = new javax.swing.JButton();
+        btn_laboratory = new javax.swing.JButton();
+        btn_hmo = new javax.swing.JButton();
+        btn_scheduler = new javax.swing.JButton();
+        btn_discharge = new javax.swing.JButton();
+        patient_info = new javax.swing.JPanel();
+        btn_outPatient1 = new javax.swing.JButton();
+        btn_laboratory1 = new javax.swing.JButton();
+        btn_hmo1 = new javax.swing.JButton();
+        btn_scheduler1 = new javax.swing.JButton();
+        btn_discharge1 = new javax.swing.JButton();
+        jPanel3 = new javax.swing.JPanel();
+        footer = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setMaximumSize(new java.awt.Dimension(1366, 768));
-        setMinimumSize(new java.awt.Dimension(1366, 768));
+        setMinimumSize(new java.awt.Dimension(1024, 600));
         setUndecorated(true);
-        setPreferredSize(getMaximumSize());
         setResizable(false);
 
-        jPanel1.setPreferredSize(new java.awt.Dimension(1366, 768));
-        jPanel1.setLayout(new java.awt.GridLayout(1, 2));
+        header.setBackground(new java.awt.Color(255, 255, 255));
+        header.setMaximumSize(new java.awt.Dimension(1024, 80));
+        header.setMinimumSize(new java.awt.Dimension(1024, 80));
+        header.setPreferredSize(new java.awt.Dimension(1024, 110));
 
-        btn_core1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        btn_core1.setText("Patient Registration (core1)");
-        btn_core1.addActionListener(new java.awt.event.ActionListener() {
+        window_control.setOpaque(false);
+        window_control.setLayout(new java.awt.GridLayout(1, 0));
+
+        btn_back.setText("<");
+        btn_back.setOpaque(false);
+        btn_back.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_core1ActionPerformed(evt);
+                btn_backActionPerformed(evt);
             }
         });
-        jPanel1.add(btn_core1);
+        window_control.add(btn_back);
 
-        btn_core2.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        btn_core2.setText("Patient Information Management (core2)");
-        btn_core2.addActionListener(new java.awt.event.ActionListener() {
+        btn_close.setText("X");
+        btn_close.setOpaque(false);
+        btn_close.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_core2ActionPerformed(evt);
+                btn_closeActionPerformed(evt);
             }
         });
-        jPanel1.add(btn_core2);
+        window_control.add(btn_close);
 
-        btn_main.setText("<");
-        btn_main.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_mainActionPerformed(evt);
-            }
-        });
+        logo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/main/images/logo_227x104.png"))); // NOI18N
 
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
+        javax.swing.GroupLayout headerLayout = new javax.swing.GroupLayout(header);
+        header.setLayout(headerLayout);
+        headerLayout.setHorizontalGroup(
+            headerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(headerLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(btn_main)
-                .addContainerGap())
-            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel2Layout.createSequentialGroup()
-                    .addGap(16, 16, 16)
-                    .addComponent(user_level, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(17, Short.MAX_VALUE)))
+                .addComponent(logo, javax.swing.GroupLayout.PREFERRED_SIZE, 227, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 727, Short.MAX_VALUE)
+                .addGroup(headerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(window_control, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, headerLayout.createSequentialGroup()
+                        .addComponent(admin_level, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(15, 15, 15))))
         );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(btn_main, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
-            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel2Layout.createSequentialGroup()
-                    .addGap(13, 13, 13)
-                    .addComponent(user_level, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(14, Short.MAX_VALUE)))
+        headerLayout.setVerticalGroup(
+            headerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(headerLayout.createSequentialGroup()
+                .addComponent(window_control, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(admin_level, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addComponent(logo, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+
+        patient_registration.setLayout(new java.awt.GridLayout(2, 3, 4, 4));
+
+        btn_outPatient.setIcon(new javax.swing.ImageIcon(getClass().getResource("/main/images/icons/people-8x.png"))); // NOI18N
+        btn_outPatient.setText("Out Patient Treatment");
+        btn_outPatient.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btn_outPatient.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        patient_registration.add(btn_outPatient);
+
+        btn_laboratory.setIcon(new javax.swing.ImageIcon(getClass().getResource("/main/images/icons/beaker-8x.png"))); // NOI18N
+        btn_laboratory.setText("Laboratory");
+        btn_laboratory.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btn_laboratory.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        patient_registration.add(btn_laboratory);
+
+        btn_hmo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/main/images/icons/medical-cross-8x.png"))); // NOI18N
+        btn_hmo.setText("HMO and Insurance");
+        btn_hmo.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btn_hmo.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        patient_registration.add(btn_hmo);
+
+        btn_scheduler.setIcon(new javax.swing.ImageIcon(getClass().getResource("/main/images/icons/calendar-8x.png"))); // NOI18N
+        btn_scheduler.setText("Surgery Scheduler");
+        btn_scheduler.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btn_scheduler.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        patient_registration.add(btn_scheduler);
+
+        btn_discharge.setIcon(new javax.swing.ImageIcon(getClass().getResource("/main/images/icons/task-8x.png"))); // NOI18N
+        btn_discharge.setText("Discharge");
+        btn_discharge.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btn_discharge.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        patient_registration.add(btn_discharge);
+
+        jTabbedPane1.addTab("Patient Registration(Core1)", patient_registration);
+
+        patient_info.setLayout(new java.awt.GridLayout(2, 3, 4, 4));
+
+        btn_outPatient1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/main/images/icons/people-8x.png"))); // NOI18N
+        btn_outPatient1.setText("Out Patient Treatment");
+        btn_outPatient1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btn_outPatient1.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        patient_info.add(btn_outPatient1);
+
+        btn_laboratory1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/main/images/icons/beaker-8x.png"))); // NOI18N
+        btn_laboratory1.setText("Laboratory");
+        btn_laboratory1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btn_laboratory1.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        patient_info.add(btn_laboratory1);
+
+        btn_hmo1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/main/images/icons/medical-cross-8x.png"))); // NOI18N
+        btn_hmo1.setText("HMO and Insurance");
+        btn_hmo1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btn_hmo1.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        patient_info.add(btn_hmo1);
+
+        btn_scheduler1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/main/images/icons/calendar-8x.png"))); // NOI18N
+        btn_scheduler1.setText("Surgery Scheduler");
+        btn_scheduler1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btn_scheduler1.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        patient_info.add(btn_scheduler1);
+
+        btn_discharge1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/main/images/icons/task-8x.png"))); // NOI18N
+        btn_discharge1.setText("Discharge");
+        btn_discharge1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btn_discharge1.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        patient_info.add(btn_discharge1);
+
+        jTabbedPane1.addTab("Patient Information Managment(Core2)", patient_info);
+
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        jPanel3.setLayout(jPanel3Layout);
+        jPanel3Layout.setHorizontalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 1034, Short.MAX_VALUE)
+        );
+        jPanel3Layout.setVerticalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 330, Short.MAX_VALUE)
+        );
+
+        jTabbedPane1.addTab("Core3", jPanel3);
+
+        footer.setBackground(java.awt.Color.red);
+        footer.setMaximumSize(new java.awt.Dimension(1024, 30));
+        footer.setMinimumSize(new java.awt.Dimension(1024, 30));
+        footer.setPreferredSize(new java.awt.Dimension(1024, 30));
+
+        javax.swing.GroupLayout footerLayout = new javax.swing.GroupLayout(footer);
+        footer.setLayout(footerLayout);
+        footerLayout.setHorizontalGroup(
+            footerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+        footerLayout.setVerticalGroup(
+            footerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 944, Short.MAX_VALUE)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap())
+            .addComponent(jTabbedPane1, javax.swing.GroupLayout.Alignment.TRAILING)
+            .addComponent(footer, javax.swing.GroupLayout.DEFAULT_SIZE, 1036, Short.MAX_VALUE)
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addComponent(header, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 1036, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(111, 111, 111)
+                .addComponent(jTabbedPane1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 222, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(167, Short.MAX_VALUE))
+                .addComponent(footer, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addComponent(header, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(399, Short.MAX_VALUE)))
         );
 
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btn_core1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_core1ActionPerformed
-        core1 c1 = new core1();
-        
-        if(this.user_level.getText().equals("0")){
-            c1.btn_edit.setVisible(true);
-        }
-        
-        c1.setVisible(true);
-        this.dispose();               
-    }//GEN-LAST:event_btn_core1ActionPerformed
-
-    private void btn_core2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_core2ActionPerformed
-        try {
-            core2 c2 = new core2();
-            c2.setVisible(true);
-            this.dispose();
-        } catch (SQLException ex) {
-            Logger.getLogger(main.class.getName()).log(Level.SEVERE, null, ex);
-        }
-    }//GEN-LAST:event_btn_core2ActionPerformed
-
-    private void btn_mainActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_mainActionPerformed
-        login lgn = new login();
-        lgn.setVisible(true);
+    private void btn_backActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_backActionPerformed
+        new main().setVisible(true);
         this.dispose();
-    }//GEN-LAST:event_btn_mainActionPerformed
+    }//GEN-LAST:event_btn_backActionPerformed
+
+    private void btn_closeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_closeActionPerformed
+        System.exit(0);
+    }//GEN-LAST:event_btn_closeActionPerformed
 
     /**
      * @param args the command line arguments
@@ -192,11 +282,26 @@ public class main extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btn_core1;
-    private javax.swing.JButton btn_core2;
-    private javax.swing.JButton btn_main;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
-    public javax.swing.JLabel user_level;
+    public javax.swing.JLabel admin_level;
+    private javax.swing.JButton btn_back;
+    private javax.swing.JButton btn_close;
+    private javax.swing.JButton btn_discharge;
+    private javax.swing.JButton btn_discharge1;
+    private javax.swing.JButton btn_hmo;
+    private javax.swing.JButton btn_hmo1;
+    private javax.swing.JButton btn_laboratory;
+    private javax.swing.JButton btn_laboratory1;
+    private javax.swing.JButton btn_outPatient;
+    private javax.swing.JButton btn_outPatient1;
+    private javax.swing.JButton btn_scheduler;
+    private javax.swing.JButton btn_scheduler1;
+    private javax.swing.JPanel footer;
+    private javax.swing.JPanel header;
+    private javax.swing.JPanel jPanel3;
+    private javax.swing.JTabbedPane jTabbedPane1;
+    private javax.swing.JLabel logo;
+    private javax.swing.JPanel patient_info;
+    private javax.swing.JPanel patient_registration;
+    private javax.swing.JPanel window_control;
     // End of variables declaration//GEN-END:variables
 }
